@@ -246,3 +246,28 @@ html {
     text-align: center;
 }
 
+
+/* start of projects section */
+.projectlist {
+    padding: 100px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 4rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 50px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.project:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
