@@ -1,5 +1,5 @@
 :root {
-    --nilo: #45CFDD;
+    --nilo: #209CEE;
     /*  color pallete https://colorhunt.co/palette/6527be9681eb45cfdda7ede7 */
     --hover-color: #f9f9f9;
     scroll-behavior: smooth;
@@ -196,9 +196,10 @@ html {
     align-items: center;
     gap: 5rem;
     transition: all 1s ease-in-out;
+    
 }
 .hero-image {
-    background-image: url(/public/img/pp.jpg);
+    background-image: url(/public/img/hero-image.webp);
     background-repeat: no-repeat;
     background-size: cover;
     border: 3px solid #f9f9f9;
