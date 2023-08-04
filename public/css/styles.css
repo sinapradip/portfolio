@@ -18,13 +18,19 @@
 a {
     color: black;
 }
+/* hide scroll bar for Chrome */
+body::-webkit-scrollbar {
+    display: none;
+}
 
 body {
-    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     font-family: Poppins,Roboto,sans-serif;
     text-decoration: none;
     margin-top: 12vh;
 }
+
 #home {
     background-color: #f9f9f9;
     padding: 10rem 0;
@@ -183,7 +189,12 @@ html {
     .hero-text span {
         justify-content: center;
     }
-    
+    .contact-container {
+        flex-direction: column;
+    }
+    .left, .right, .button-section {
+        width: 100%;
+    }
 }
 
 /*start of hero section*/
@@ -199,17 +210,14 @@ html {
     
 }
 .hero-image {
-    background-image: url(/public/img/hero-image.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 3px solid #f9f9f9;
+    border: 3px solid rgba(9,9,121,1);
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     height: 20rem;
     transition: all 1s ease-in-out;
     width: 20rem;
     animation: morph 7s ease-in-out infinite;
-    
 }
+
 /*Animation definition*/
 @keyframes morph 
 {
@@ -241,11 +249,6 @@ html {
     border-radius: 100%;
 }
 
-.footer {
-    background-color: #000000;
-    color:#ffffff;
-    text-align: center;
-}
 
 
 /* start of projects section */
@@ -271,4 +274,88 @@ html {
 .project:hover {
     transform: translateY(-10px);
     transition: all 0.3s ease-in-out;
+}
+.project:onmouseleave {
+    transform: translateY(-10px) rotate(360deg);
+}
+
+/* contact container */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10rem;
+}
+.left, .right {
+    flex: 1;
+    text-align: center;
+}
+
+.button-section {
+    display: flex;
+    flex: 1;
+    column-gap: 2rem;
+}
+
+
+.transparent-button {
+    color:#000000;
+    background-color: transparent;
+    outline: none;
+    border: 3px solid black;
+    font-size: 1rem;
+    padding: 10px;
+    font-family:'Montserrat', sans-serif;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: 0.3s all ease-in;
+    cursor: pointer;
+    max-width: 200px;
+    flex: 1;
+}
+.transparent-button:hover {
+    color: #fff;
+    background-color: #000000;
+}
+
+.about-container {
+    background: #209CEE;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0, 212, 255) 100%);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-flow: row wrap; 
+}
+.about-text {
+    width: 50vw;
+    text-align: center;
+}
+#contact {
+    background-color: #209CEE;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.footer {
+    background-color: #000000;
+    color:#ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+/*  contact section */
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
 }
